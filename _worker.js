@@ -137,7 +137,7 @@ export default {
       }
 
       if (url.pathname.startsWith("/sub")) {
-        return await reverseWeb(request, SUB_PAGE_URL);
+        return Response.redirect(SUB_PAGE_URL, 301);
       } else if (url.pathname.startsWith("/check")) {
         const target = url.searchParams.get("target").split(":");
         const result = await checkPrxHealth(target[0], target[1] || "443");
