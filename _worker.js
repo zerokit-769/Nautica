@@ -1,8 +1,10 @@
 import { connect } from "cloudflare:sockets";
 
 // Variables
-const rootDomain = "foolvpn.me"; // Ganti dengan domain utama kalian
-const serviceName = "nautica"; // Ganti dengan nama workers kalian
+let rootDomain = "";
+let serviceName = "";
+let APP_DOMAIN = "";
+
 const apiKey = ""; // Ganti dengan Global API key kalian (https://dash.cloudflare.com/profile/api-tokens)
 const apiEmail = ""; // Ganti dengan email yang kalian gunakan
 const accountID = ""; // Ganti dengan Account ID kalian (https://dash.cloudflare.com -> Klik domain yang kalian gunakan)
@@ -17,7 +19,6 @@ const flash = "dm1lc3M=";
 const v2 = "djJyYXk=";
 const neko = "Y2xhc2g=";
 
-const APP_DOMAIN = `${serviceName}.${rootDomain}`;
 const PORTS = [443, 80];
 const PROTOCOLS = [atob(horse), atob(flash), "ss"];
 const SUB_PAGE_URL = "https://foolvpn.me/nautica";
@@ -110,6 +111,10 @@ export default {
   async fetch(request, env, ctx) {
     try {
       const url = new URL(request.url);
+      APP_DOMAIN = url.hostname;
+      serviceName = APP_DOMAIN.split(".")[0];
+      rootDomain = APP_DOMAIN.replace(`${serviceName}.`, "");
+
       const upgradeHeader = request.headers.get("Upgrade");
 
       // Gateway check
@@ -137,7 +142,7 @@ export default {
       }
 
       if (url.pathname.startsWith("/sub")) {
-        return Response.redirect(SUB_PAGE_URL + `?host=${serviceName}.${rootDomain}`, 301);
+        return Response.redirect(SUB_PAGE_URL + `?host=${APP_DOMAIN}`, 301);
       } else if (url.pathname.startsWith("/check")) {
         const target = url.searchParams.get("target").split(":");
         const result = await checkPrxHealth(target[0], target[1] || "443");
