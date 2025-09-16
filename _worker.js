@@ -1,8 +1,8 @@
 import { connect } from "cloudflare:sockets";
 
 // Variables
-let serviceName = "nautica";
-let APP_DOMAIN = "blackshadow.dpdns.org";
+let serviceName = "";
+let APP_DOMAIN = "";
 
 let prxIP = "";
 let cachedPrxList = [];
