@@ -5,20 +5,20 @@ compatibility_flags = ["nodejs_compat_v2"]
 
 routes = [
 
-  { pattern = "blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "df.game.naver.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "ava.game.naver.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "demo.appsflyer.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "quiz.int.vidio.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "graph.instagram.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "blog.webex.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "zaintest.vuclip.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "bimbel.ruangguru.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "support.zoom.us.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "cache.netflix.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "investor.fb.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "nontontv.vidio.com.blackshadow.dpdns.org", custom_domain = true },
-  { pattern = "blog.clova.line.me.blackshadow.dpdns.org", custom_domain = true },
+  { pattern = "balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "df.game.naver.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "ava.game.naver.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "demo.appsflyer.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "quiz.int.vidio.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "graph.instagram.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "blog.webex.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "zaintest.vuclip.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "bimbel.ruangguru.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "support.zoom.us.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "cache.netflix.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "investor.fb.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "nontontv.vidio.com.balckwolf.dpdns.org", custom_domain = true },
+  { pattern = "blog.clova.line.me.balckwolf.dpdns.org", custom_domain = true },
 ]
 
 [unsafe.metadata.observability]
